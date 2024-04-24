@@ -6,7 +6,9 @@ const nextConfig = {
   },
   images: {
     unoptimized: true
-  }
+  },
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/arabvpnhub/' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/arabvpnhub' : '',
 }
 
 module.exports = nextConfig
