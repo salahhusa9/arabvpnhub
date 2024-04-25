@@ -33,7 +33,20 @@ export function FreeChapters() {
             <Button
               href="https://go.getnord.net/aff_c?offer_id=226&aff_id=104253"
               color="white"
-                    // style={{ direction: 'rtl' }}
+              onClick={() => {
+                var callback = function () {
+                  if (typeof(url) != 'undefined') {
+                    window.location = url;
+                  }
+                };
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-16543431410/AljUCKexj6oZEPL1wtA9',
+                    'value': 1.0,
+                    'currency': 'MAD',
+                    'event_callback': callback
+                });
+                return false;
+              }}
               className="mt-4">احصل الآن على خصم 69%</Button>
           </form>
         </Container>

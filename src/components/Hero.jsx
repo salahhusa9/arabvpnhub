@@ -55,7 +55,23 @@ export function Hero() {
             انضم إلى الملايين الذين يثقون في NordVPN لتأمين بياناتهم.
             </p>
             <div className="mt-8 flex gap-4">
-              <Button href="https://go.getnord.net/aff_c?offer_id=226&aff_id=104253" color="blue">
+              <Button 
+                href="https://go.getnord.net/aff_c?offer_id=226&aff_id=104253" color="blue"
+                onClick={() => {
+                  var callback = function () {
+                    if (typeof(url) != 'undefined') {
+                      window.location = url;
+                    }
+                  };
+                  gtag('event', 'conversion', {
+                      'send_to': 'AW-16543431410/AljUCKexj6oZEPL1wtA9',
+                      'value': 1.0,
+                      'currency': 'MAD',
+                      'event_callback': callback
+                  });
+                  return false;
+                }}
+              >
               احصل على خصم 69%
               </Button>
               {/* <Button href="#pricing" variant="outline" color="blue">
