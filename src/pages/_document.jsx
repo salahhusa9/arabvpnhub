@@ -1,11 +1,11 @@
 import { Head, Html, Main, NextScript } from 'next/document'
 
-const googleAds = `
+const google = `
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'AW-16543431410');
+  gtag('config', 'G-HV1BVMHB0D');
 `
 
 export default function Document() {
@@ -13,8 +13,8 @@ export default function Document() {
     <Html className="scroll-smooth bg-white antialiased" lang="en" dir="rtl">
       <Head>
 
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16543431410"></script>
-        <script dangerouslySetInnerHTML={{ __html: googleAds }} />
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-HV1BVMHB0D"></script>
+        <script dangerouslySetInnerHTML={{ __html: google }} />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
